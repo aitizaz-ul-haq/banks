@@ -18,7 +18,7 @@ require('./src/config/db.config');
 app.use(bodyParser.urlencoded({ extended: false }))
  
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '10mb' }))
 
 //adding cors
 app.use(cors())
@@ -35,3 +35,5 @@ app.get('/' , (req, res) => {
         message: 'welcome to banks api'
     });
 })
+
+require('./src/app/routes/banks.route')(app);

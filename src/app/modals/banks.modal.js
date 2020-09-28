@@ -4,10 +4,9 @@ const banksSchema = mongoose.Schema({
   bankName: { type: String },
   productName: { type: String },
   sector: { type: String },
-  purpose: [{ type: String }],
+  purpose: [String],
 
   markUp: {
-    type: String,
     postFix: { type: String },
     preFix: { type: String },
     minMarkUp: { type: String },
@@ -19,10 +18,10 @@ const banksSchema = mongoose.Schema({
   },
 
   tenure: {
-    mintenure: { type: Number },
-    maxtenure: { type: Number },
+    minTenure: { type: Number },
+    maxTenure: { type: Number },
   },
-  collateral: [{ type: String }],
+  collateral: [String],
   contactDetails: {
     name: { type: String },
     designation: { type: String },
