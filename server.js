@@ -37,3 +37,4 @@ app.get('/' , (req, res) => {
 })
 
 require('./src/app/routes/banks.route')(app);
+require('./src/app/routes/user.route')(app);
